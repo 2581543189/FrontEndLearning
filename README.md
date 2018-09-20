@@ -2,9 +2,9 @@
 前端学习项目
 -创建于2018-09-20
 
-https://webpack.js.org/guides/installation/ webpack学习笔记
+https://webpack.js.org/guides/installation/ webpack学习笔记(第一次写markdown 丑的一比)
 ---
-1. *不用自己编写index.html*
+1. ***不用自己编写index.html***
 
    `plugins: [`  
      `new HtmlWebpackPlugin({`  
@@ -12,22 +12,22 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
      `})`  
    `],`  
 ---
-2. *自动清理目录*
+2. ***自动清理目录***
 
  `new CleanWebpackPlugin(['dist']),`  
 ---
-3. *生产环境源码打断点*
+3. ***生产环境源码打断点***
 
  `devtool: 'inline-source-map',`  
 ---
-4. *本地server*
+4. ***本地server***
 
  `"start": "webpack-dev-server --open",`  
  `devServer: {`  
     `contentBase: './dist'`  
  `},`  
 ---
-5. *热模块更换Hot Module Replacement (or HMR)*
+5. ***热模块更换Hot Module Replacement (or HMR)***
 
 `devServer: {`  
     `contentBase: './dist',`  
@@ -35,16 +35,16 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
     `},`  
 `new webpack.HotModuleReplacementPlugin()`  
 ---
-6. *Tree Shaking 不使用的模块不打包 类似修剪树枝*
+6. ***Tree Shaking 不使用的模块不打包 类似修剪树枝***
 
  `mode: 'development'``
 ---
-7. *区分环境配置*
+7. ***区分环境配置***
 
  `const merge = require('webpack-merge');`  
  `"start": "webpack-dev-server --open --config webpack.dev.js",`  
 ---
-8. *模块公共引用的部分不重复打包*
+8. ***模块公共引用的部分不重复打包***
 
  `optimization: {`  
      `splitChunks: {`  
@@ -52,7 +52,7 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
      `}`  
    `}`  
 
-   *或者 动态加载*
+   **或者 动态加载**
 
 `async function getComponent() {`  
    `var element = document.createElement('div');`  
@@ -61,7 +61,7 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
    `return element;`  
 `}`  
 ---
-9. *文件名控制cache*
+9. ***文件名控制cache***
 
 `filename: '[name].[contenthash].js',`  
   
@@ -78,7 +78,7 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
      `}`  
     `}`  
 ---
-10. *Shimming(垫片) 某些lib在代码里使用了$ 之类的全局对象*
+10. ***Shimming(垫片) 某些lib在代码里使用了$ 之类的全局对象***
 
 `plugins: [`  
     `new webpack.ProvidePlugin({`  
@@ -86,10 +86,8 @@ https://webpack.js.org/guides/installation/ webpack学习笔记
      `})`  
    `]`  
 ---
-11. *Progressive Web Applications (or PWAs) 渐进式网站应用??*
-
+11. ***Progressive Web Applications (or PWAs) 渐进式网站应用??***
 
 `yarn add http-server --save-dev`  
-
 `"start": "http-server dist"`  
 ---
