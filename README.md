@@ -14,7 +14,7 @@ https://webpack.js.org/guides/installation/ webpack学习笔记(第一次写mark
     ],  
 ```
 ---
-2. # 自动清理目录
+2. ## 自动清理目录
 ```
     new CleanWebpackPlugin(['dist']),  
 ```
